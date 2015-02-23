@@ -10,6 +10,7 @@
 #include "lcd.h"
 #include "timer.h"
 #include "keypad.h"
+#include "cn.h"
 #include <stdio.h>
 
 _CONFIG1( JTAGEN_OFF & GCP_OFF & GWRP_OFF & BKBUG_ON & COE_OFF & ICS_PGx1 &
