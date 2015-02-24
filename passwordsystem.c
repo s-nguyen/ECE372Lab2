@@ -1,9 +1,9 @@
 // ******************************************************************************************* //
 // File:         lab2p1.c
-// Date:         
-// Authors:      
+// Date:
+// Authors:
 //
-// Description: 
+// Description:
 // ******************************************************************************************* //
 
 #include "p24fj64ga002.h"
@@ -39,11 +39,11 @@ int main(void)
     initKeypad();
     initLCD();
     //initTimer1();
-    
+
 
     curState = waitforpress;
 
-   
+
     while(1)
     {
         switch(curState){
@@ -75,23 +75,10 @@ int main(void)
                 printCharLCD(key);
                 curState = checkcursor;
                 break;
-            case checkcursor:
-                if(cursor == 7){
-                    moveCursorLCD(1, 0);
-                    cursor++;
-                }
-                else if(cursor == 15){
-                    moveCursorLCD(0, 0);
-                    cursor = 0;
-                }
-                else{
-                    cursor++;
-                }
-                curState = waitforpress;
-                break;
+            
 
         }
-       
+
     }
 
     return 0;
