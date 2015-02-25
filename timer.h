@@ -10,6 +10,7 @@
 
 void delayUs(unsigned int delay);
 void delay5ms();
+void delayS(int s);
 void getTimedString(int watch, char* str);
 void initTimer1();
 

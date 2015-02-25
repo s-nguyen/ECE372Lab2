@@ -28,6 +28,23 @@ void delayUs(unsigned int delay){
     T2CONbits.TON = 0;
 }
 
+void delayS(int s){
+    TMR2 = 0;
+    PR2 = (FCY/256) - 1;
+    IFS0bits.T2IF = 0;
+    T2CONbits.TCKPS = 0b11;
+    T2CONbits.TON = 1;
+    while(s != 0){
+        while(IFS0bits.T2IF == 0){
+        //Do nothing
+        }
+        IFS0bits.T2IF = 0;
+        s = s - 1;
+    }
+    
+    T2CONbits.TON = 0;
+ 
+}
 //Functions that always delays 5ms
 void delay5ms(){
     TMR2 = 0;
