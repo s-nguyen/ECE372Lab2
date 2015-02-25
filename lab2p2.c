@@ -39,7 +39,7 @@ int main(void)
 {
     char key;
     char tempPassword[] = "0000";
-    char password[4][5]; //Never forget the stupid null character
+    char password[4][5] = {{'\0'}}; //Never forget the stupid null character
     int starCount = 0;
     int passCount = 0;
     int storageCount = 0;
@@ -152,13 +152,10 @@ int main(void)
                 }
                 break;
             case checkpassword:
+                curState = bad;
                 for(i = 0; i < storageCount; i++){
                     if(strcmp(password[i], tempPassword) == 0){
                         curState = good;
-                        break;
-                    }
-                    else{
-                        curState = bad;
                     }
                 }
                 break;
