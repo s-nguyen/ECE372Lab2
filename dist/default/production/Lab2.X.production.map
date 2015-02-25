@@ -52,6 +52,10 @@ c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libpic30-elf.a(crt
                               (__resetPRI)
 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libpic30-elf.a(data_init_standard.o)
                               c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libpic30-elf.a(crt0_standard.o) (__data_init_standard)
+c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libc-elf.a(strcmp.eo)
+                              build/default/production/lab2p2.o (_strcmp)
+c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libc-elf.a(strcpy.eo)
+                              build/default/production/lab2p2.o (_strcpy)
 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libc-elf.a(sprintf_cdnopuxX.XXeo)
                               build/default/production/timer.o (__sprintf_cdnopuxX)
 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libc-elf.a(doprnt_cdnopuxX.XXeo)
@@ -82,12 +86,12 @@ Program Memory  [Origin = 0x200, Length = 0xa9fc]
 
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
-.text                        0x200               0xc1a          0x1227  (4647)
-.const                       0xe1a                0x44            0x66  (102)
-.text                        0xe5e               0x654           0x97e  (2430)
-.dinit                      0x14b2                0xcc           0x132  (306)
+.text                        0x200               0xc34          0x124e  (4686)
+.const                       0xe34                0x3e            0x5d  (93)
+.text                        0xe72               0x64a           0x96f  (2415)
+.dinit                      0x14bc                0xcc           0x132  (306)
 
-                     Total program memory used (bytes):         0x1d3d  (7485) 11%
+                     Total program memory used (bytes):         0x1d4c  (7500) 11%
 
 
 Data Memory  [Origin = 0x800, Length = 0x2000]
@@ -144,74 +148,78 @@ External Symbols in Program Memory (by address):
                   0x00023c                  __data_init
                   0x00023c                  __data_init_standard
                   0x00029a                  __DefaultInterrupt
-                  0x0002fe                  __sprintf_cdnopuxX
-                  0x00032a                  __vfprintf_cdnopuxX
-                  0x000b30                  ___udivsi3
-                  0x000b50                  ___mulp32peds3
-                  0x000b50                  ___mulp32eds3
-                  0x000b50                  ___mulsi3
-                  0x000bce                  ___udivmoddi3
-                  0x000cb2                  ___udivdi3
-                  0x000cc0                  ___umoddi3
-                  0x000cc8                  ___divdi3
-                  0x000d28                  ___moddi3
-                  0x000d84                  ___muldi3
-                  0x000dd6                  ___umuldi3
-                  0x000e5e                  _main
-                  0x0010a6                  __CNInterrupt
-                  0x0010e0                  _writeFourBits
-                  0x001144                  _writeLCD
-                  0x001164                  _printCharLCD
-                  0x001176                  _initLCD
-                  0x001200                  _printStringLCD
-                  0x001220                  _clearLCD
-                  0x00122e                  _moveCursorLCD
-                  0x00125c                  _testLCD
-                  0x0012b8                  _delayUs
-                  0x0012e8                  _delayS
-                  0x00131e                  _delay5ms
-                  0x001346                  _getTimedString
-                  0x0013a0                  _initTimer1
-                  0x0013bc                  _initKeypad
-                  0x0013f4                  _scanKeypad
+                  0x0002fe                  _strcmp
+                  0x00030c                  _strcpy
+                  0x000318                  __sprintf_cdnopuxX
+                  0x000344                  __vfprintf_cdnopuxX
+                  0x000b4a                  ___udivsi3
+                  0x000b6a                  ___mulsi3
+                  0x000b6a                  ___mulp32peds3
+                  0x000b6a                  ___mulp32eds3
+                  0x000be8                  ___udivmoddi3
+                  0x000ccc                  ___udivdi3
+                  0x000cda                  ___umoddi3
+                  0x000ce2                  ___divdi3
+                  0x000d42                  ___moddi3
+                  0x000d9e                  ___muldi3
+                  0x000df0                  ___umuldi3
+                  0x000e72                  _main
+                  0x0010b0                  __CNInterrupt
+                  0x0010ea                  _writeFourBits
+                  0x00114e                  _writeLCD
+                  0x00116e                  _printCharLCD
+                  0x001180                  _initLCD
+                  0x00120a                  _printStringLCD
+                  0x00122a                  _clearLCD
+                  0x001238                  _moveCursorLCD
+                  0x001266                  _testLCD
+                  0x0012c2                  _delayUs
+                  0x0012f2                  _delayS
+                  0x001328                  _delay5ms
+                  0x001350                  _getTimedString
+                  0x0013aa                  _initTimer1
+                  0x0013c6                  _initKeypad
+                  0x0013fe                  _scanKeypad
 
 External Symbols in Program Memory (by name):
 
-                  0x0010a6                  __CNInterrupt
+                  0x0010b0                  __CNInterrupt
                   0x00029a                  __DefaultInterrupt
-                  0x000cc8                  ___divdi3
-                  0x000d28                  ___moddi3
-                  0x000d84                  ___muldi3
-                  0x000b50                  ___mulp32eds3
-                  0x000b50                  ___mulp32peds3
-                  0x000b50                  ___mulsi3
-                  0x000cb2                  ___udivdi3
-                  0x000bce                  ___udivmoddi3
-                  0x000b30                  ___udivsi3
-                  0x000cc0                  ___umoddi3
-                  0x000dd6                  ___umuldi3
+                  0x000ce2                  ___divdi3
+                  0x000d42                  ___moddi3
+                  0x000d9e                  ___muldi3
+                  0x000b6a                  ___mulp32eds3
+                  0x000b6a                  ___mulp32peds3
+                  0x000b6a                  ___mulsi3
+                  0x000ccc                  ___udivdi3
+                  0x000be8                  ___udivmoddi3
+                  0x000b4a                  ___udivsi3
+                  0x000cda                  ___umoddi3
+                  0x000df0                  ___umuldi3
                   0x00023c                  __data_init
                   0x00023c                  __data_init_standard
                   0x00022c                  __psv_init
                   0x000200                  __resetPRI
-                  0x0002fe                  __sprintf_cdnopuxX
-                  0x00032a                  __vfprintf_cdnopuxX
-                  0x001220                  _clearLCD
-                  0x00131e                  _delay5ms
-                  0x0012e8                  _delayS
-                  0x0012b8                  _delayUs
-                  0x001346                  _getTimedString
-                  0x0013bc                  _initKeypad
-                  0x001176                  _initLCD
-                  0x0013a0                  _initTimer1
-                  0x000e5e                  _main
-                  0x00122e                  _moveCursorLCD
-                  0x001164                  _printCharLCD
-                  0x001200                  _printStringLCD
-                  0x0013f4                  _scanKeypad
-                  0x00125c                  _testLCD
-                  0x0010e0                  _writeFourBits
-                  0x001144                  _writeLCD
+                  0x000318                  __sprintf_cdnopuxX
+                  0x000344                  __vfprintf_cdnopuxX
+                  0x00122a                  _clearLCD
+                  0x001328                  _delay5ms
+                  0x0012f2                  _delayS
+                  0x0012c2                  _delayUs
+                  0x001350                  _getTimedString
+                  0x0013c6                  _initKeypad
+                  0x001180                  _initLCD
+                  0x0013aa                  _initTimer1
+                  0x000e72                  _main
+                  0x001238                  _moveCursorLCD
+                  0x00116e                  _printCharLCD
+                  0x00120a                  _printStringLCD
+                  0x0013fe                  _scanKeypad
+                  0x0002fe                  _strcmp
+                  0x00030c                  _strcpy
+                  0x001266                  _testLCD
+                  0x0010ea                  _writeFourBits
+                  0x00114e                  _writeLCD
 
 Memory Configuration
 
@@ -251,7 +259,7 @@ LOAD c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libfx-elf.a
                   0x000002          0x2 SHORT 0x0 ((ABSOLUTE (__reset) >> 0x10) & 0x7f)
                   0x000003          0x2 SHORT 0x0
 
-.text             0x000200        0xc1a
+.text             0x000200        0xc34
  *(.init)
  .init            0x000200         0x3c c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libpic30-elf.a(crt0_standard.o)
                   0x000200                  __resetPRI
@@ -271,47 +279,51 @@ LOAD c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libfx-elf.a
  *(.libm)
  *(.libdsp)
  *(.lib*)
+ .libc.strcmp     0x0002fe          0xe c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libc-elf.a(strcmp.eo)
+                  0x0002fe                  _strcmp
+ .libc.strcpy     0x00030c          0xc c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libc-elf.a(strcpy.eo)
+                  0x00030c                  _strcpy
  .libc._sprintf_cdnopuxX
-                  0x0002fe         0x2c c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libc-elf.a(sprintf_cdnopuxX.XXeo)
-                  0x0002fe                  __sprintf_cdnopuxX
+                  0x000318         0x2c c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libc-elf.a(sprintf_cdnopuxX.XXeo)
+                  0x000318                  __sprintf_cdnopuxX
  .libc._vfprintf_cdnopuxX
-                  0x00032a        0x6f6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libc-elf.a(doprnt_cdnopuxX.XXeo)
-                  0x00032a                  __vfprintf_cdnopuxX
- .libc.fputc      0x000a20         0x88 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libc-elf.a(fputc.eo)
-                  0x000a20                  _fputc
- .libc._flsbuf    0x000aa8         0x84 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libc-elf.a(flsbuf.eo)
-                  0x000aa8                  __flsbuf
- .libc.dowrite    0x000b2c          0x4 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libpic30-elf.a(write.eo)
- .libm.udivsi3    0x000b30         0x20 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a(udivsi3.eo)
-                  0x000b30                  ___udivsi3
- .libm.mulsi3     0x000b50          0xc c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a(mulsi3.eo)
-                  0x000b50                  ___mulp32peds3
-                  0x000b50                  ___mulsi3
-                  0x000b50                  ___mulp32eds3
+                  0x000344        0x6f6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libc-elf.a(doprnt_cdnopuxX.XXeo)
+                  0x000344                  __vfprintf_cdnopuxX
+ .libc.fputc      0x000a3a         0x88 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libc-elf.a(fputc.eo)
+                  0x000a3a                  _fputc
+ .libc._flsbuf    0x000ac2         0x84 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libc-elf.a(flsbuf.eo)
+                  0x000ac2                  __flsbuf
+ .libc.dowrite    0x000b46          0x4 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libpic30-elf.a(write.eo)
+ .libm.udivsi3    0x000b4a         0x20 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a(udivsi3.eo)
+                  0x000b4a                  ___udivsi3
+ .libm.mulsi3     0x000b6a          0xc c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a(mulsi3.eo)
+                  0x000b6a                  ___mulp32peds3
+                  0x000b6a                  ___mulsi3
+                  0x000b6a                  ___mulp32eds3
  .libm.__PplusBdi
-                  0x000b5c         0x28 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                  0x000b76         0x28 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
  .libm.__PminusBdi
-                  0x000b84         0x4a c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                  0x000b9e         0x4a c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
  .libm.__udivmoddi3
-                  0x000bce         0xe4 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
-                  0x000bce                  ___udivmoddi3
+                  0x000be8         0xe4 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                  0x000be8                  ___udivmoddi3
  .libm.__udivdi3
-                  0x000cb2          0xe c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
-                  0x000cb2                  ___udivdi3
+                  0x000ccc          0xe c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                  0x000ccc                  ___udivdi3
  .libm.__umoddi3
-                  0x000cc0          0x8 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
-                  0x000cc0                  ___umoddi3
+                  0x000cda          0x8 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                  0x000cda                  ___umoddi3
  .libm.__divdi3
-                  0x000cc8         0x60 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
-                  0x000cc8                  ___divdi3
+                  0x000ce2         0x60 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                  0x000ce2                  ___divdi3
  .libm.__moddi3
-                  0x000d28         0x5c c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
-                  0x000d28                  ___moddi3
+                  0x000d42         0x5c c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                  0x000d42                  ___moddi3
  .libm.__muldi3
-                  0x000d84         0x52 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a(muldi3.eo)
-                  0x000d84                  ___muldi3
- .libm.umuldi3    0x000dd6         0x44 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a(umuldi3.eo)
-                  0x000dd6                  ___umuldi3
+                  0x000d9e         0x52 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a(muldi3.eo)
+                  0x000d9e                  ___muldi3
+ .libm.umuldi3    0x000df0         0x44 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a(umuldi3.eo)
+                  0x000df0                  ___umuldi3
 
 usercode
  *(usercode)
@@ -327,27 +339,27 @@ __CONFIG1         0x00abfe          0x2
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x2213
+.debug_info       0x000000       0x2232
  *(.debug_info)
  .debug_info      0x000000        0xd83 build/default/production/keypad.o
  .debug_info      0x000d83        0x5b1 build/default/production/lcd.o
  .debug_info      0x001334        0x710 build/default/production/timer.o
- .debug_info      0x001a44        0x7cf build/default/production/lab2p2.o
+ .debug_info      0x001a44        0x7ee build/default/production/lab2p2.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0x472
+.debug_abbrev     0x000000        0x469
  *(.debug_abbrev)
  .debug_abbrev    0x000000         0xf8 build/default/production/keypad.o
  .debug_abbrev    0x0000f8         0xf7 build/default/production/lcd.o
  .debug_abbrev    0x0001ef        0x136 build/default/production/timer.o
- .debug_abbrev    0x000325        0x14d build/default/production/lab2p2.o
+ .debug_abbrev    0x000325        0x144 build/default/production/lab2p2.o
 
-.debug_line       0x000000        0xc6d
+.debug_line       0x000000        0xc4d
  *(.debug_line)
  .debug_line      0x000000        0x2d1 build/default/production/keypad.o
  .debug_line      0x0002d1        0x332 build/default/production/lcd.o
  .debug_line      0x000603        0x226 build/default/production/timer.o
- .debug_line      0x000829        0x444 build/default/production/lab2p2.o
+ .debug_line      0x000829        0x424 build/default/production/lab2p2.o
 
 .debug_frame      0x000000        0x18c
  *(.debug_frame)
@@ -423,7 +435,7 @@ __CONFIG1         0x00abfe          0x2
                   0x000034          0x4 LONG 0x29a DEFINED (__SI2C1Interrupt)?ABSOLUTE (__SI2C1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000036          0x4 LONG 0x29a DEFINED (__MI2C1Interrupt)?ABSOLUTE (__MI2C1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000038          0x4 LONG 0x29a DEFINED (__CompInterrupt)?ABSOLUTE (__CompInterrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00003a          0x4 LONG 0x10a6 DEFINED (__CNInterrupt)?ABSOLUTE (__CNInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00003a          0x4 LONG 0x10b0 DEFINED (__CNInterrupt)?ABSOLUTE (__CNInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00003c          0x4 LONG 0x29a DEFINED (__INT1Interrupt)?ABSOLUTE (__INT1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00003e          0x4 LONG 0x29a DEFINED (__Interrupt21)?ABSOLUTE (__Interrupt21):ABSOLUTE (__DefaultInterrupt)
                   0x000040          0x4 LONG 0x29a DEFINED (__Interrupt22)?ABSOLUTE (__Interrupt22):ABSOLUTE (__DefaultInterrupt)
@@ -551,7 +563,7 @@ __CONFIG1         0x00abfe          0x2
                   0x000134          0x4 LONG 0x29a DEFINED (__AltSI2C1Interrupt)?ABSOLUTE (__AltSI2C1Interrupt):DEFINED (__SI2C1Interrupt)?ABSOLUTE (__SI2C1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000136          0x4 LONG 0x29a DEFINED (__AltMI2C1Interrupt)?ABSOLUTE (__AltMI2C1Interrupt):DEFINED (__MI2C1Interrupt)?ABSOLUTE (__MI2C1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000138          0x4 LONG 0x29a DEFINED (__AltCompInterrupt)?ABSOLUTE (__AltCompInterrupt):DEFINED (__CompInterrupt)?ABSOLUTE (__CompInterrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00013a          0x4 LONG 0x10a6 DEFINED (__AltCNInterrupt)?ABSOLUTE (__AltCNInterrupt):DEFINED (__CNInterrupt)?ABSOLUTE (__CNInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00013a          0x4 LONG 0x10b0 DEFINED (__AltCNInterrupt)?ABSOLUTE (__AltCNInterrupt):DEFINED (__CNInterrupt)?ABSOLUTE (__CNInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00013c          0x4 LONG 0x29a DEFINED (__AltINT1Interrupt)?ABSOLUTE (__AltINT1Interrupt):DEFINED (__INT1Interrupt)?ABSOLUTE (__INT1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00013e          0x4 LONG 0x29a DEFINED (__AltInterrupt21)?ABSOLUTE (__AltInterrupt21):DEFINED (__Interrupt21)?ABSOLUTE (__Interrupt21):ABSOLUTE (__DefaultInterrupt)
                   0x000140          0x4 LONG 0x29a DEFINED (__AltInterrupt22)?ABSOLUTE (__AltInterrupt22):DEFINED (__Interrupt22)?ABSOLUTE (__Interrupt22):ABSOLUTE (__DefaultInterrupt)
@@ -1247,7 +1259,7 @@ LOAD data_init
                   0x000278         0xaa build/default/production/lab2p2.o
 
 __c30_signature
-                  0x000322         0x6c
+                  0x000322         0x78
  __c30_signature
                   0x000322          0x6 build/default/production/keypad.o
  __c30_signature
@@ -1261,29 +1273,33 @@ __c30_signature
  __c30_signature
                   0x000340          0x6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libpic30-elf.a(data_init_standard.o)
  __c30_signature
-                  0x000346          0x6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libc-elf.a(sprintf_cdnopuxX.XXeo)
+                  0x000346          0x6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libc-elf.a(strcmp.eo)
  __c30_signature
-                  0x00034c          0x6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libc-elf.a(doprnt_cdnopuxX.XXeo)
+                  0x00034c          0x6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libc-elf.a(strcpy.eo)
  __c30_signature
-                  0x000352          0x6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libc-elf.a(fputc.eo)
+                  0x000352          0x6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libc-elf.a(sprintf_cdnopuxX.XXeo)
  __c30_signature
-                  0x000358          0x6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libc-elf.a(_iob.eo)
+                  0x000358          0x6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libc-elf.a(doprnt_cdnopuxX.XXeo)
  __c30_signature
-                  0x00035e          0x6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libc-elf.a(flsbuf.eo)
+                  0x00035e          0x6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libc-elf.a(fputc.eo)
  __c30_signature
-                  0x000364          0x6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libpic30-elf.a(write.eo)
+                  0x000364          0x6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libc-elf.a(_iob.eo)
  __c30_signature
-                  0x00036a          0x6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libpic30-elf.a(c30_uart.eo)
+                  0x00036a          0x6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libc-elf.a(flsbuf.eo)
  __c30_signature
-                  0x000370          0x6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a(udivsi3.eo)
+                  0x000370          0x6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libpic30-elf.a(write.eo)
  __c30_signature
-                  0x000376          0x6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a(mulsi3.eo)
+                  0x000376          0x6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libpic30-elf.a(c30_uart.eo)
  __c30_signature
-                  0x00037c          0x6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                  0x00037c          0x6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a(udivsi3.eo)
  __c30_signature
-                  0x000382          0x6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a(muldi3.eo)
+                  0x000382          0x6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a(mulsi3.eo)
  __c30_signature
-                  0x000388          0x6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a(umuldi3.eo)
+                  0x000388          0x6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+ __c30_signature
+                  0x00038e          0x6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a(muldi3.eo)
+ __c30_signature
+                  0x000394          0x6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a(umuldi3.eo)
 
 .nbss               0x0800          0x4
  .nbss              0x0800          0x4 build/default/production/lab2p2.o
@@ -1310,33 +1326,33 @@ __c30_signature
  .data              0x08fc          0x2 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libpic30-elf.a(c30_uart.eo)
                     0x08fc                  ___C30_UART
 
-.const              0x8e1a         0x44 load address 0x000e1a  
- .const             0x8e1a         0x2c build/default/production/lab2p2.o
- .const             0x8e46         0x10 build/default/production/timer.o
- .const             0x8e56          0x8 build/default/production/lcd.o
+.const              0x8e34         0x3e load address 0x000e34  
+ .const             0x8e34         0x26 build/default/production/lab2p2.o
+ .const             0x8e5a         0x10 build/default/production/timer.o
+ .const             0x8e6a          0x8 build/default/production/lcd.o
 
-.text             0x000e5e        0x654
- .text            0x000e5e        0x282 build/default/production/lab2p2.o
-                  0x000e5e                  _main
-                  0x0010a6                  __CNInterrupt
- .text            0x0010e0        0x1d8 build/default/production/lcd.o
-                  0x0010e0                  _writeFourBits
-                  0x001144                  _writeLCD
-                  0x001164                  _printCharLCD
-                  0x001176                  _initLCD
-                  0x001200                  _printStringLCD
-                  0x001220                  _clearLCD
-                  0x00122e                  _moveCursorLCD
-                  0x00125c                  _testLCD
- .text            0x0012b8        0x104 build/default/production/timer.o
-                  0x0012b8                  _delayUs
-                  0x0012e8                  _delayS
-                  0x00131e                  _delay5ms
-                  0x001346                  _getTimedString
-                  0x0013a0                  _initTimer1
- .text            0x0013bc         0xf6 build/default/production/keypad.o
-                  0x0013bc                  _initKeypad
-                  0x0013f4                  _scanKeypad
+.text             0x000e72        0x64a
+ .text            0x000e72        0x278 build/default/production/lab2p2.o
+                  0x000e72                  _main
+                  0x0010b0                  __CNInterrupt
+ .text            0x0010ea        0x1d8 build/default/production/lcd.o
+                  0x0010ea                  _writeFourBits
+                  0x00114e                  _writeLCD
+                  0x00116e                  _printCharLCD
+                  0x001180                  _initLCD
+                  0x00120a                  _printStringLCD
+                  0x00122a                  _clearLCD
+                  0x001238                  _moveCursorLCD
+                  0x001266                  _testLCD
+ .text            0x0012c2        0x104 build/default/production/timer.o
+                  0x0012c2                  _delayUs
+                  0x0012f2                  _delayS
+                  0x001328                  _delay5ms
+                  0x001350                  _getTimedString
+                  0x0013aa                  _initTimer1
+ .text            0x0013c6         0xf6 build/default/production/keypad.o
+                  0x0013c6                  _initKeypad
+                  0x0013fe                  _scanKeypad
 
-.dinit            0x0014b2         0xcc
- .dinit           0x0014b2         0xcc data_init
+.dinit            0x0014bc         0xcc
+ .dinit           0x0014bc         0xcc data_init

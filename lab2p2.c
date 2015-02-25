@@ -12,6 +12,8 @@
 #include "keypad.h"
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 _CONFIG1( JTAGEN_OFF & GCP_OFF & GWRP_OFF & BKBUG_ON & COE_OFF & ICS_PGx1 &
           FWDTEN_OFF & WINDIS_OFF & FWPSA_PR128 & WDTPS_PS32768 )
@@ -23,40 +25,35 @@ typedef enum stateTypeEnum{
 
 
     scan, waitforpress, waitforrelease, debouncepress, debouncerelease,
-            setmode, checkinputset, enter, checkinputenter, checkpassword
+            setmode, checkinputset, enter, checkinputenter, checkpassword,
+            good, bad
 
 
 } stateType;
 
 volatile stateType curState = setmode;
 volatile stateType nextState;
-volatile int correct = 0;
 
 
 int main(void)
 {
     char key;
-    char tempPassword[] = "0000\0";
+    char tempPassword[] = "0000";
+    char password[4][5]; //Never forget the stupid null character
     int starCount = 0;
     int passCount = 0;
-    char *password[4] = {'\0'};
-    int passStorage = 0;
-    int found = 0;
+    int storageCount = 0;
     int i = 0;
 
     initKeypad();
     initLCD();
-    //initTimer1();
-
 
     curState = setmode;
-
 
     while(1)
     {
         switch(curState){
             case enter:
-                found = 0;
                 starCount = 0;
                 passCount = 0;
                 clearLCD();
@@ -115,8 +112,8 @@ int main(void)
                     delayS(2);
                     //Storepassword
                     tempPassword[passCount] = key;
-                    password[passStorage] = tempPassword; //this is saving the address not the actual value
-                    passStorage++;
+                    strcpy(password[storageCount], tempPassword);
+                    storageCount++;
                     curState = enter;
                 }
                 else{
@@ -128,7 +125,6 @@ int main(void)
                 }
                 break;
             case checkinputenter:
-
                 //TODO: fix entering a number after *
                 if(key == '*' && passCount == 0){
                     printCharLCD(key);
@@ -139,12 +135,8 @@ int main(void)
                 else if(key == '*' && passCount == 1 && starCount == 1){
                     curState = setmode;
                 }
-                else if(key == '*' || key == '#'){
-                    clearLCD();
-                    moveCursorLCD(0,0);
-                    printStringLCD("Bad");
-                    delayS(2);
-                    curState = enter;
+                else if(key == '*' || key == '#' || (key != '*' && starCount == 1)){
+                    curState = bad;
                 }
                 else if(passCount == 3){
                     tempPassword[passCount] = key;
@@ -159,28 +151,29 @@ int main(void)
                     curState = waitforpress;
                 }
                 break;
-               //TODO: SeperateState for good and bad
             case checkpassword:
-                for(i = 0; i < passStorage; i++){
-                    if(password[i] == tempPassword){ //this is saving the address not the actual value
-                        found = 1;
+                for(i = 0; i < storageCount; i++){
+                    if(strcmp(password[i], tempPassword) == 0){
+                        curState = good;
+                        break;
                     }
                     else{
-                        found = 0;
+                        curState = bad;
                     }
                 }
+                break;
+            case good:
                 clearLCD();
                 moveCursorLCD(0,0);
-                if(found == 1){
-                    printStringLCD("Good");
-                    moveCursorLCD(1,0);
-                    printStringLCD(password[i]);
-                }
-                else{
-                    printStringLCD("Bad");
-                }
+                printStringLCD("Good");
                 delayS(2);
-                passCount = 0;
+                curState = enter;
+                break;
+            case bad:
+                clearLCD();
+                moveCursorLCD(0,0);
+                printStringLCD("Bad");
+                delayS(2);
                 curState = enter;
                 break;
         }

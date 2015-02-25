@@ -1,6 +1,6 @@
 /*
  * File:   timer.c
- * Authors:
+ * Authors: Stephen Nguyen
  *
  * Created on December 30, 2014, 8:07 PM
  */
